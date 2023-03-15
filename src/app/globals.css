@@ -11,6 +11,9 @@ html {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background-color: #fbfbfc;
   color: #787f84;
 }
@@ -33,4 +36,10 @@ a:hover {
 
 a:active {
   color: #911f3a;
+}
+
+.wrapper {
+  max-width: 1024px;
+  padding: 0 0.75rem;
+  margin: 0 auto;
 }

@@ -27,15 +27,20 @@ export default function RootLayout({ children }: Props) {
         <meta name="viewport" content="width=device-width,initial-scale=1" />
       </head>
       <body>
-        <div className={style.wrapper}>
-          <header className={style.header}>
-            <Image src={Logo} width={253} height={32} priority style={{ display: 'block' }} alt="Genspark Consulting" />
-          </header>
-          <main className={style.main}>
-            {children}
-          </main>
-          <footer className={style.footer}>&copy; {new Date().getFullYear()} Genspark Consulting</footer>
-        </div>
+        <header className={style.header}>
+          <div className="wrapper">
+            <Image src={Logo} width={253} height={32} priority style={{ display: 'block', margin: '1rem 0'  }} alt="Genspark Consulting" />
+            <div style={{ borderTop: '1px solid #acb0b4' }} />
+          </div>
+        </header>
+        <main className={style.main}>
+          {children}
+        </main>
+        <footer className={style.footer}>
+          <div className="wrapper">
+            &copy; {new Date().getFullYear()} Genspark Consulting
+          </div>
+        </footer>
       </body>
     </html>
   )
