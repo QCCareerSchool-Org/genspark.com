@@ -10,7 +10,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #fbfbfc;
-  color: #787f84;
+  color: #444;
   overflow-y: scroll;
 }
 
