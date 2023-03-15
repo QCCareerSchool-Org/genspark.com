@@ -29,7 +29,7 @@ export default function RootLayout({ children }: Props) {
       <body>
         <div className={style.wrapper}>
           <header className={style.header}>
-            <Image src={Logo} width={253} height={32} style={{ display: 'block' }} alt="Genspark Consulting" />
+            <Image src={Logo} width={253} height={32} priority style={{ display: 'block' }} alt="Genspark Consulting" />
           </header>
           <main className={style.main}>
             {children}

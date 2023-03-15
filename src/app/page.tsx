@@ -10,11 +10,11 @@ export default function Home() {
   return (
     <>
       <div className={style.imageWrapper}>
-      <Image src={Left} width={490} height={392} className={`${style.homepageImage} ${style.leftImage}`} alt="" />
-      <Image src={Right} width={490} height={392} className={`${style.homepageImage} ${style.rightImage}`} alt="" />
+      <Image src={Left} width={490} height={392} placeholder="blur" className={`${style.homepageImage} ${style.leftImage}`} alt="" />
+      <Image src={Right} width={490} height={392} placeholder="blur" className={`${style.homepageImage} ${style.rightImage}`} alt="" />
       </div>
       <div className={style.title}>
-        <Image className={style.title} src={DavidGriller} width={280} height={56} alt="David Griller, Managing Partner" />
+        <Image className={style.title} src={DavidGriller} width={280} height={56} priority alt="David Griller, Managing Partner" />
       </div>
       <ul className={style.contactList}>
         <li><strong>T:</strong> 1-613-716-5271</li>
