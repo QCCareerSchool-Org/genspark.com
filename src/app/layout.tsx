@@ -1,31 +1,33 @@
+// eslint-disable-next-line camelcase
 import { Open_Sans } from 'next/font/google';
+import type { StaticImageData } from 'next/image';
+import Image from 'next/image';
+import type { ReactNode } from 'react';
 
-import './globals.css'
 import style from './layout.module.css';
+import Logo from '@/images/genspark-logo.svg';
+import './globals.css';
 
 type Props = {
-  children: React.ReactNode
-}
+  children: ReactNode;
+};
 
 const openSans = Open_Sans({
-  weight: ['400', '700'],
-  subsets: ['latin'],
-})
+  weight: [ '400', '700' ],
+  subsets: [ 'latin' ],
+});
 
 export const metadata = {
   title: 'Genspark Consulting',
-}
+};
 
-import Logo from '../images/genspark-logo.svg';
-import Image from 'next/image';
-
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children }: Props): ReactNode {
   return (
     <html lang="en" className={openSans.className}>
       <body>
         <header className={style.header}>
           <div className="wrapper">
-            <Image src={Logo} width={253} height={32} priority style={{ display: 'block', margin: '1rem 0'  }} alt="Genspark Consulting" />
+            <Image src={Logo as StaticImageData} width={253} height={32} priority style={{ display: 'block', margin: '1rem 0' }} alt="Genspark Consulting" />
             <div style={{ borderTop: '1px solid #acb0b4' }} />
           </div>
         </header>
@@ -39,5 +41,5 @@ export default function RootLayout({ children }: Props) {
         </footer>
       </body>
     </html>
-  )
+  );
 }
